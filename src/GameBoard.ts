@@ -111,7 +111,7 @@ export class GameBoard {
     render() {
 
         // Clears the canvas each cycle
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+        if ( this.config.clear_canvas ) this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
 
         // Loop over every ball
         this.balls.map((ball) => {

@@ -49,5 +49,4 @@ Solution to the Yieldify Developer Interview challenge. Tasked to build a simple
 ### Running the tests
 1. Clone the Repo onto your local machine
 2. Install the npm dependancies: `npm i`
-3. Build the code: `npm run clusterbomb`
-4. Run the tests: `npm run tests`
+3. Build and run the tests: `npm test`

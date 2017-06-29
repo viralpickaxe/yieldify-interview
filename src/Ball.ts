@@ -117,7 +117,7 @@ export class Ball {
             // Force = μR (Since mass is 1 )
             new_direction_x -= (new_direction_x < 0 ? -1 : 1) * this.config.gravity * this.config.friction
 
-            if ( Math.abs(new_direction_x) < 0.2 ) new_direction_x = 0
+            if ( Math.abs(new_direction_x) <= this.config.friction * this.config.gravity ) new_direction_x = 0
 
         }
 

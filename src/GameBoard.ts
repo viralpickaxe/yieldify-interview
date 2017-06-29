@@ -121,7 +121,7 @@ export class GameBoard {
 
             // Render the ball on the canvas
             this.ctx.beginPath()
-            this.ctx.arc(ball.position_vector[0], ball.position_vector[1], 10, 0, Math.PI*2, true)
+            this.ctx.arc(ball.position_vector[0], ball.position_vector[1], this.config.ball_size - 2, 0, Math.PI*2, true)
             this.ctx.lineWidth = 4
             this.ctx.strokeStyle = "black"
             this.ctx.fillStyle = "white"

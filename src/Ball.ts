@@ -114,7 +114,7 @@ export class Ball {
         if ( new_position_y === this.bounds[1] - this.config.ball_size ) {
 
             // Slow down the velocity of the ball using the friction of a particle on a plane
-            // Force = μR (Since mass is 1 )
+            // Friction force = μR (Since mass is 1 )
             new_direction_x -= (new_direction_x < 0 ? -1 : 1) * this.config.gravity * this.config.friction
 
             if ( Math.abs(new_direction_x) <= this.config.friction * this.config.gravity ) new_direction_x = 0

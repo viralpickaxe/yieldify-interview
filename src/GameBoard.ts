@@ -66,9 +66,20 @@ export class GameBoard {
             event.clientY
         ]
 
-        let created_ball = new Ball(position_vector)
+        let bounds: [number] = [
+            this.canvas.width,
+            this.canvas.height
+        ]
+
+        let created_ball = new Ball(position_vector, bounds)
 
         this.balls.push(created_ball)
+
+    }
+
+    tickBalls() {
+
+        this.balls.map((ball) => ball.tick())
 
     }
 
@@ -77,6 +88,8 @@ export class GameBoard {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
 
         this.balls.map((ball) => {
+
+            ball.tick()
 
             this.ctx.beginPath()
             this.ctx.arc(ball.position_vector[0], ball.position_vector[1], 10, 0, Math.PI*2, true)

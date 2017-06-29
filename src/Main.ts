@@ -1,3 +1,3 @@
 import { GameBoard } from "./GameBoard"
 
-new GameBoard("gameboard")
+let game_board = new GameBoard("gameboard")

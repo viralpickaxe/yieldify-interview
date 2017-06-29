@@ -29,7 +29,7 @@ Solution to the Yieldify Developer Interview challenge. Tasked to build a simple
 
 ### Repo Structure
 - `src` - Main source code folder containing all `.ts` files
-- `tests` - Root folder for all tests
+- `test` - Root folder for all tests
 - `resources` - Folder for all static resources
     - `public` - Contains the html to render the page and also systemjs
     - `styles` - Uncompiled scss styles

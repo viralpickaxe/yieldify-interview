@@ -1,0 +1,39 @@
+{
+    "name": "yieldify-interview",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "tests": "./node_modules/.bin/mocha tests/**/*.test.js",
+        "build-application": "./node_modules/.bin/tsc",
+        "watch-application": "./node_modules/.bin/tsc -w",
+        "dev-host": "./node_modules/.bin/browser-sync start --config bs-config.js",
+        "build-styles": "./node_modules/.bin/gulp build-styles",
+        "watch-styles": "./node_modules/.bin/gulp styles",
+        "clusterbomb": "concurrently \"npm run watch-application\" \"npm run watch-styles\" \"npm run dev-host\" --kill-others --names \"Watch Application,Watch Styles,Dev Host\""
+    },
+    "directories": {
+        "test": "tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://viralpickaxe@github.com/viralpickaxe/yieldify-interview.git"
+    },
+    "author": "Jamie Davies <jamie@iamjamiedavies.com> (iamjamiedavies.com)",
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "mocha": "^3.1.2",
+        "typescript": "^2.1.4"
+    },
+    "dependencies": {
+        "@types/node": "^7.0.12",
+        "assert": "^1.4.1",
+        "browser-sync": "^2.18.8",
+        "concurrently": "^3.4.0",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^3.1.1",
+        "gulp-cssnano": "^2.1.2",
+        "gulp-sass": "^3.1.0",
+        "gulp-shorthand": "^1.1.0",
+        "gulp-sourcemaps": "^2.5.1"
+    }
+}

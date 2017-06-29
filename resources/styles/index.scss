@@ -4,15 +4,7 @@ body {
 
 }
 
-.GameBoard {
-
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
-	
-}
-
-.options {
+.GameConfig {
 
 	position: absolute;
 	top: 0;
@@ -23,4 +15,12 @@ body {
 	border-right: 1px solid black;
 	border-bottom: 1px solid black;
 
+}
+
+.GameBoard {
+
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	
 }

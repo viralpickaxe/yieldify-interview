@@ -3,17 +3,47 @@
  * 
  * @class GameConfig
  */
-class GameConfig {
+export class GameConfig {
 
+    /**
+     * Gravity to impose on the balls
+     * 
+     * @type {number}
+     * @memberof GameConfig
+     */
     public gravity: number
 
-    constructor(gravity: number) {
+    /**
+     * Coefficient of friction of the walls
+     * 
+     * @type {number}
+     * @memberof GameConfig
+     */
+    public friction: number
+
+    /**
+     * Size of the balls
+     * 
+     * @type {number}
+     * @memberof GameConfig
+     */
+    public ball_size: number
+
+    /**
+     * Elasticity of the balls
+     * 
+     * @type {number}
+     * @memberof GameConfig
+     */
+    public ball_elasticity: number
+
+    constructor(gravity: number, friction: number, ball_size: number, ball_elasticity: number) {
 
         this.gravity = gravity
+        this.friction = friction
+        this.ball_size = ball_size
+        this.ball_elasticity = ball_elasticity
 
     }
 
 }
-
-// Init a singleton of the gameconfig
-export default new GameConfig(2)
